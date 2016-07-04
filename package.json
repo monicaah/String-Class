@@ -1,0 +1,20 @@
+{
+  "name": "String-Class",
+  "version": "1.0.0",
+  "description": "Extends the String class in Javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andela-mkwamboka/String-Class.git"
+  },
+  "keywords": [],
+  "author": "Monicah Kwamboka",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andela-mkwamboka/String-Class/issues"
+  },
+  "homepage": "https://github.com/andela-mkwamboka/String-Class#readme"
+}

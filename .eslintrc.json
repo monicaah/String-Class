@@ -1,25 +1,30 @@
 {
-  "extends": "airbnb"
-  "env": {
-    "browser": true,
-    "node": true,
-    "jasmine": true,
-    "prototypejs": true,
-    "es6": true
-  },
-  "globals": {},
-  "ecmaFeatures": {
-    "arrowFunctions": true,
-    "classes": true
-  },
-  "parser": null,
-  "rules": {
-    "space-before-function-paren": 2,
-    "quotes": [
-      2,
-      "single",
-      "avoid-escape"
-    ],
-    "indent": 2
-  }
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es6": true,
+        "jasmine": true
+    },
+    "extends": "eslint:recommended",
+    "parserOptions": {
+        "sourceType": "module"
+    },
+    "rules": {
+        "indent": [
+            "error",
+            2
+        ],
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ]
+    }
 }

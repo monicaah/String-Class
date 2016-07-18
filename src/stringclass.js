@@ -20,7 +20,7 @@ String.prototype.toLower = function toLower() {
 };
 
 String.prototype.ucFirst = function ucFirst() {
-  // Checks the range of characters between a-z to check if this is a string 
+  // Checks the range of characters between a-z to check if this is a string
   // If it is it uppercases the first character using its index [0]
   // Joins the rest of the words in the string
   // Else returns the word
@@ -34,7 +34,7 @@ String.prototype.isQuestion = function isQuestion() {
 };
 
 String.prototype.words = function words() {
-  // Checks if it is a string 
+  // Checks if it is a string
   // Splits the string at the point where the words stops
   // else returns an array of the word if it cant be split
   return /\W+/.test(this) ? this.split(/\W+/) : [this];
@@ -47,19 +47,17 @@ String.prototype.wordCount = function wordCount() {
 
 String.prototype.toCurrency = function toCurrency() {
   // parseFloat returns a number only
-  // () capture everything  
-  // 
-  // 
+  // () capture everything
   let results;
-  /^[0-9]+/gi.test(this) ?  results = this : results = this.replace(/[^\d]+/g.exec(this)[0], '');
-  return parseFloat(results).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,') 
+  (/^[0-9]+/gi).test(this) ?  results = this : results = this.replace(/[^\d]+/g.exec(this)[0], '');
+  return parseFloat(results).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,')
 };
 
 String.prototype.fromCurrency = function fromCurrency() {
   // Removes argument in a number formart
   // If the argument cannot be converted into a number, it returns NaN.
-  return Number(this.replace(/,/ , ''))
-}
+  return Number(this.replace(/,/ , ''));
+};
 
 
 

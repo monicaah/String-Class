@@ -48,7 +48,7 @@ String.prototype.wordCount = function wordCount() {
 String.prototype.toCurrency = function toCurrency() {
   // parseFloat returns a number only
   // () capture everything
-  let results;
+  var results;
   (/^[0-9]+/gi).test(this) ?  results = this : results = this.replace(/[^\d]+/g.exec(this)[0], '');
   return parseFloat(results).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
 };

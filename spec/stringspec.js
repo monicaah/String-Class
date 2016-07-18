@@ -33,6 +33,7 @@ describe('isQuestion', () => {
 
   it('Return false if the string is not a question', () => {
     expect('wow'.isQuestion()).toBeFalse();
+    expect('w?ow'.isQuestion()).toBeFalse();
   });
 });
 
@@ -52,10 +53,22 @@ describe('toCurrency', () => {
   it('Returns a currency representation of the String', () => {
     expect('12345'.toCurrency()).toEqual('12,345.00');
   });
+
+  it('Returns a currency representation of the String', () => {
+    expect('ksh39089'.toCurrency()).toEqual('39,089.00');
+  });
+
+  it('Returns a NaN if a string has a non-number', () => {
+    expect('String'.toCurrency()).toEqual('NaN');
+  });
 });
 
 describe('fromCurrency', () => {
   it('Returns a number representation of the Currency', () => {
     expect('11,111.11'.fromCurrency()).toEqual(11111.11);
+  });
+
+  it('Returns a number representation of the Currency', () => {
+    expect('word'.fromCurrency()).toEqual(NaN);
   });
 });

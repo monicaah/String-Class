@@ -50,7 +50,7 @@ String.prototype.toCurrency = function toCurrency() {
   // () capture everything
   let results;
   (/^[0-9]+/gi).test(this) ?  results = this : results = this.replace(/[^\d]+/g.exec(this)[0], '');
-  return parseFloat(results).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,')
+  return parseFloat(results).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
 };
 
 String.prototype.fromCurrency = function fromCurrency() {

@@ -1,7 +1,7 @@
 // Karma configuration
 // Generated on Mon Jul 04 2016 22:36:24 GMT+0300 (EAT)
 
-module.exports = function(config) {
+module.exports = config => {
   config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
@@ -12,13 +12,13 @@ module.exports = function(config) {
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
     frameworks: [
       'jasmine',
-      'jasmine-matchers'
+      'jasmine-matchers',
     ],
 
 
     // list of files / patterns to load in the browser
     files: [
-      'spec/*js' , 'src/*js'
+      'spec/*js', 'src/*js',
     ],
 
     // list of files to exclude
@@ -46,7 +46,8 @@ module.exports = function(config) {
 
 
     // level of logging
-    // possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
+    // possible values: config.LOG_DISABLE
+    // || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
     logLevel: config.LOG_INFO,
 
 
@@ -65,6 +66,6 @@ module.exports = function(config) {
 
     // Concurrency level
     // how many browser should be started simultaneous
-    concurrency: Infinity
-  })
-}
+    concurrency: Infinity,
+  });
+};

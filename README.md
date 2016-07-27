@@ -6,7 +6,7 @@
 
 The following resources were used:
 
-* [Karma](https://karma-runner.github.io/1.0/index.html) -  Testing environment 
+* [Karma](https://karma-runner.github.io/1.0/index.html) -  Testing environment
 * [Jasmine](http://jasmine.github.io/2.0/introduction.html) - Javascript testing framework
 * [Travis](https://travis-ci.org) - Continuous integration service used to build and test software projects hosted at GitHub.
 * [Node](https://nodejs.org/en/) -  An open-source, cross-platform runtime environment for developing server-side Web applications.
@@ -38,7 +38,7 @@ You can also:
 $ npm test
 ```
 ## Usage
-First run 
+First run
 ```javascript
 $ node
 ```
@@ -50,28 +50,28 @@ then on the node enviroment require the file with the methods by running the fol
 ```javascript
 1. hasVowels : Returns true if the string contains vowels.
     'mice'.hasVowels(); // true
-    
+
 2. toUpper : Returns the string with all characters in upper cases.
     'country'.toUpper(); // COUNTRY
-    
+
 3. toLower : Returns the string with all characters in lower cases.
     'MACHO'.toLower(); // macho
-    
+
 4. ucFirst : Returns the string with the First Character to an Upper case.
     'google'.ucFirst(); // Google
-    
+
 5. isQuestion : Return true if the string is a question.
     'what?'.isQuestion(); // true
-    
+
 6. words : Returns a list of the words in the string, as an Array.
     'Oh my word'.words(); // ['Oh', 'my', 'word']
-    
+
 7. wordCount : Returns the number of words in the string.
     'Incomprehensibilities'.wordCount(); // 21
-    
+
 8. toCurrency : Returns a currency representation of the String.
     '12345'.toCurrency(); // '12,345.00'
-    
+
 9. fromCurrency : Returns a number representation of the Currency String.
     '11,111.11'.fromCurrency(); // 11111.11
 ```

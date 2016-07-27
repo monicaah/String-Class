@@ -1,3 +1,5 @@
+/* eslint-disable  no-extend-native */
+
 String.prototype.hasVowels = function hasVowels() {
   // Returns true if the string matches any of the characters between the brackets.
   return /[aeiou]/i.test(this);
@@ -24,8 +26,8 @@ String.prototype.ucFirst = function ucFirst() {
   // If it is it uppercases the first character using its index [0]
   // Joins the rest of the words in the string
   // Else returns the word
-  let character = this.match(/[a-z]/)[0];
-  return this.replace(character, character.toUpper())
+  const character = this.match(/[a-z]/)[0];
+  return this.replace(character, character.toUpper());
 };
 
 String.prototype.isQuestion = function isQuestion() {
@@ -54,12 +56,14 @@ String.prototype.toCurrency = function toCurrency() {
   // \. Tests the digits before the fullstop
   // $1, Adds a comma after the first captured group.
   let results;
-  (/^[0-9]+/gi).test(this) ?  results = this : results = this.replace(/[^\d]+/g.exec(this)[0], '');
+  results = /^[0-9]+/gi.test(this) ?
+            results = this : results =
+            this.replace(/[^\d]+/g.exec(this)[0], '');
   return parseFloat(results).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
 };
 
 String.prototype.fromCurrency = function fromCurrency() {
   // Removes argument in a number format
   // If the argument cannot be converted into a number, it returns NaN.
-  return Number(this.replace(/,/ , ''));
+  return Number(this.replace(/,/, ''));
 };

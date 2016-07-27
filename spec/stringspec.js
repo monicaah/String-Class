@@ -53,9 +53,9 @@ describe('words', () => {
 
 describe('wordCount', () => {
   it('Returns the number of words in the string', () => {
-    expect('Incomprehensibilities'.wordCount()).toEqual(21);
-    expect('Glass123'.wordCount()).toEqual(8);
-    expect('1234 Newsletter'.wordCount()).toEqual(15);
+    expect('City of lights'.wordCount()).toEqual(3);
+    expect('Glass123'.wordCount()).toEqual(1);
+    expect('1234 News $$ letter'.wordCount()).toEqual(3);
   });
 });
 

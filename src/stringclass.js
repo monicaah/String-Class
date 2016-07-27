@@ -24,7 +24,8 @@ String.prototype.ucFirst = function ucFirst() {
   // If it is it uppercases the first character using its index [0]
   // Joins the rest of the words in the string
   // Else returns the word
-  return /^[a-z]/i.test(this) ? this[0].toUpper() + this.slice(1) : this;
+  let character = this.match(/[a-z]/)[0];
+  return this.replace(character, character.toUpper())
 };
 
 String.prototype.isQuestion = function isQuestion() {
@@ -34,15 +35,16 @@ String.prototype.isQuestion = function isQuestion() {
 };
 
 String.prototype.words = function words() {
-  // Checks if it is a string
-  // Splits the string at the point where the words stops
-  // Else returns an array of the word if it cant be split
-  return /\W+/.test(this) ? this.split(/\W+/) : [this];
+  // \w+ matches one or more word characters
+  // Splits the string at the point where the words character ends
+  // Else returns an empty array of the word doesnt contain characters
+  return /\w+/.test(this) ? this.split(/\W+/) : [];
 };
 
 String.prototype.wordCount = function wordCount() {
+  // Use the word method to return the array of words
   // Uses the inbuilt.length method
-  return this.length;
+  return this.words().length;
 };
 
 String.prototype.toCurrency = function toCurrency() {
@@ -51,7 +53,7 @@ String.prototype.toCurrency = function toCurrency() {
   // (?=(\d{3}) Asserts the captured group is immediately followed by a three number digits
   // \. Tests the digits before the fullstop
   // $1, Adds a comma after the first captured group.
-  var results;
+  let results;
   (/^[0-9]+/gi).test(this) ?  results = this : results = this.replace(/[^\d]+/g.exec(this)[0], '');
   return parseFloat(results).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
 };

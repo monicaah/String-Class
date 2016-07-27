@@ -27,6 +27,11 @@
     "karma": "^1.1.1",
     "karma-firefox-launcher": "^1.0.0",
     "karma-jasmine": "^1.0.2",
-    "karma-jasmine-matchers": "^2.0.2"
-  }
+    "karma-jasmine-matchers": "^2.0.2",
+    "coveralls": "^2.11.11",
+    "istanbul": "^0.4.4",
+    "karma-coverage": "^1.1.1",
+    "karma-coveralls": "^1.1.2"
+  },
+  "dependencies": {}
 }

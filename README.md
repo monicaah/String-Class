@@ -1,3 +1,7 @@
+[![Coverage Status](https://coveralls.io/repos/github/andela-mkwamboka/String-Class/badge.svg?branch=develop)](https://coveralls.io/github/andela-mkwamboka/String-Class?branch=develop)
+
+[![Build Status](https://travis-ci.org/swagger-api/swagger-js.svg?branch=master)](https://travis-ci.org/swagger-api/swagger-js)
+
 # [String Class](https://github.com/andela-mkwamboka/String-Class)
 
 >String class uses prototype oriented programming to extend the Javascript String Class to support more manupilation features

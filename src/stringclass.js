@@ -1,4 +1,5 @@
 /* eslint-disable  no-extend-native */
+/* eslint-disable  no-var*/
 
 String.prototype.hasVowels = function hasVowels() {
   // Returns true if the string matches any of the characters between the brackets.
@@ -55,7 +56,7 @@ String.prototype.toCurrency = function toCurrency() {
   // (?=(\d{3}) Asserts the captured group is immediately followed by a three number digits
   // \. Tests the digits before the fullstop
   // $1, Adds a comma after the first captured group.
-  let results = '';
+  var results = '';
   results = /^[0-9]+/gi.test(this) ?
             results = this : results =
             this.replace(/[^\d]+/g.exec(this)[0], '');

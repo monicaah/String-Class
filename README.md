@@ -1,6 +1,4 @@
-[![Coverage Status](https://coveralls.io/repos/github/andela-mkwamboka/String-Class/badge.svg?branch=develop)](https://coveralls.io/github/andela-mkwamboka/String-Class?branch=develop)
-
-[![Build Status](https://travis-ci.org/swagger-api/swagger-js.svg?branch=master)](https://travis-ci.org/swagger-api/swagger-js)
+[![Coverage Status](https://coveralls.io/repos/github/andela-mkwamboka/String-Class/badge.svg?branch=develop)](https://coveralls.io/github/andela-mkwamboka/String-Class?branch=develop) [![Build Status](https://travis-ci.org/swagger-api/swagger-js.svg?branch=master)](https://travis-ci.org/swagger-api/swagger-js)
 
 # [String Class](https://github.com/andela-mkwamboka/String-Class)
 
@@ -17,10 +15,12 @@ The following resources were used:
 
 ### Installation
 
-You need node installed globally:
+You need [node](https://nodejs.org/en/download/package-manager/) installed globally depending on your OS:
 
+*For mac install brew then use it to install node*
 ```sh
-$ sudo npm install npm -g
+$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+$ brew install node
 ```
 Open your Terminal and run these commands.
 

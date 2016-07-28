@@ -38,7 +38,7 @@ String.prototype.isQuestion = function isQuestion() {
 };
 
 String.prototype.words = function words() {
-  // \w+ matches one or more word characters
+  // \w+ matches one or more word characters alpha numeric characters
   // Splits the string at the point where the words character ends
   // Else returns an empty array of the word doesnt contain characters
   return /\w+/.test(this) ? this.split(/\W+/) : [];
@@ -56,10 +56,9 @@ String.prototype.toCurrency = function toCurrency() {
   // (?=(\d{3}) Asserts the captured group is immediately followed by a three number digits
   // \. Tests the digits before the fullstop
   // $1, Adds a comma after the first captured group.
-  var results = '';
-  results = /^[0-9]+/gi.test(this) ?
-            results = this : results =
-            this.replace(/[^\d]+/g.exec(this)[0], '');
+  var results = /^[0-9]+$/g.test(this) ?
+    this : this.replace(/[^\d]+/g.exec(this)[0], '');
+
   return parseFloat(results).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
 };
 

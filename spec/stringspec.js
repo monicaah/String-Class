@@ -1,3 +1,4 @@
+/* eslint-disable  no-undef*/
 describe('hasVowels', () => {
   it('Returns true if the string contains vowels', () => {
     expect('mice'.hasVowels()).toBeTrue();
@@ -5,7 +6,7 @@ describe('hasVowels', () => {
 
   it('Returns false if the string doesn\'t contain vowels', () => {
     expect('cry'.hasVowels()).toBeFalse();
-    expect('@#!324'.hasVowels()).toBeFalse()
+    expect('@#!324'.hasVowels()).toBeFalse();
   });
 });
 
@@ -18,7 +19,7 @@ describe('toUpper', () => {
 });
 
 describe('toLower', () => {
-  it('Returns the String with all it\'s characters in lower case', () => {
+  it('Returns the String with all its characters in lower case', () => {
     expect('MACHO'.toLower()).toEqual('macho');
     expect('mACHO'.toLower()).toEqual('macho');
     expect('M34achO'.toLower()).toEqual('m34acho');
@@ -26,7 +27,7 @@ describe('toLower', () => {
 });
 
 describe('ucFirst', () => {
-  it('Returns the String with the First Character Upper case', () => {
+  it('Returns the String with the First word Character Upper case', () => {
     expect('google'.ucFirst()).toEqual('Google');
     expect('123google'.ucFirst()).toEqual('123Google');
   });
@@ -46,7 +47,7 @@ describe('isQuestion', () => {
 describe('words', () => {
   it('Returns a list of the words in the string, as an Array', () => {
     expect('Oh my word'.words()).toEqual(['Oh', 'my', 'word']);
-    expect('Oh my @#@$ word'.words()).toEqual(['Oh', 'my', 'word']); 
+    expect('Oh my @#@$ word'.words()).toEqual(['Oh', 'my', 'word']);
     expect('!!! @@@ ???'.words()).toEqual([]);
   });
 });
@@ -66,10 +67,13 @@ describe('toCurrency', () => {
 
   it('Returns a currency representation of the String', () => {
     expect('ksh39089'.toCurrency()).toEqual('39,089.00');
+    expect('39089ksh'.toCurrency()).toEqual('39,089.00');
+    expect('390Sh.89cts'.toCurrency()).toEqual('39,089.00');
   });
 
   it('Returns a NaN if a string has a non-number', () => {
     expect('String'.toCurrency()).toEqual('NaN');
+    expect('$%#'.toCurrency()).toEqual('NaN');
   });
 });
 
@@ -80,5 +84,6 @@ describe('fromCurrency', () => {
 
   it('Returns a number representation of the Currency', () => {
     expect('word'.fromCurrency()).toEqual(NaN);
+    expect('$%#'.fromCurrency()).toEqual(NaN);
   });
 });

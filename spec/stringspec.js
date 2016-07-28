@@ -36,6 +36,7 @@ describe('ucFirst', () => {
 describe('isQuestion', () => {
   it('Return true if the string is a question', () => {
     expect('What?'.isQuestion()).toBeTrue();
+    expect('What? '.isQuestion()).toBeTrue();
   });
 
   it('Return false if the string is not a question', () => {

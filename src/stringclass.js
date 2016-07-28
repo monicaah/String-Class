@@ -34,7 +34,7 @@ String.prototype.ucFirst = function ucFirst() {
 String.prototype.isQuestion = function isQuestion() {
   // ? Preceded by a backslash to represent the character itself
   // $ dollar sign matches the end of a string
-  return /\?$/.test(this);
+  return /\?$/.test(this.trim());
 };
 
 String.prototype.words = function words() {
@@ -56,9 +56,10 @@ String.prototype.toCurrency = function toCurrency() {
   // (?=(\d{3}) Asserts the captured group is immediately followed by a three number digits
   // \. Tests the digits before the fullstop
   // $1, Adds a comma after the first captured group.
-  var results = /^[0-9]+$/g.test(this) ?
-    this : this.replace(/[^\d]+/g.exec(this)[0], '');
-
+  var results = '';
+  results = /^[0-9]+$/gi.test(this) ?
+              results = this :
+              results = this.replace(/[^\d]+/g.exec(this)[0], '');
   return parseFloat(results).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
 };
 

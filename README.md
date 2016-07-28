@@ -2,7 +2,7 @@
 
 # [String Class](https://github.com/andela-mkwamboka/String-Class)
 
->String class uses prototype oriented programming to extend the Javascript String Class to support more manupilation features
+>String class uses prototype oriented programming to extend the Javascript String Class to support more manipulation features
 
 ### Tech
 
@@ -24,7 +24,7 @@ $ brew install node
 ```
 Open your Terminal and run these commands.
 
-Clone the repo from github:
+Clone the repo from Github:
 ```sh
 git clone https://github.com/andela-mkwamboka/String-Class
 ```
@@ -46,7 +46,7 @@ First run
 ```javascript
 $ node
 ```
-then on the node enviroment require the file with the methods by running the following command:
+then on the node environment require the file with the methods by running the following command:
 ```javascript
 > require('./src/stringclass.js')
 ```
@@ -61,7 +61,7 @@ then on the node enviroment require the file with the methods by running the fol
 3. toLower : Returns the string with all characters in lower cases.
     'MACHO'.toLower(); // macho
 
-4. ucFirst : Returns the string with the First Character to an Upper case.
+4. ucFirst : Returns the string with the First Character to an Uppercase.
     'google'.ucFirst(); // Google
 
 5. isQuestion : Return true if the string is a question.
